@@ -1,17 +1,11 @@
 import styled from "styled-components";
 
-export const Wrapper =
-  styled.footer`
+export const Wrapper = styled.footer`
+  margin-top: auto;
 
-  margin-top:auto;
+  padding: 32px;
 
-  padding:
-    ${({ theme }) =>
-      theme.spacing.xl};
+  text-align: center;
 
-  text-align:center;
-
-  border-top:1px solid
-    ${({ theme }) =>
-      theme.colors.border};
+  border-top: 1px solid #e5e7eb;
 `;

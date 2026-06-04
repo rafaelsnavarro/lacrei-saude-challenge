@@ -1,21 +1,11 @@
 "use client";
 
-import {
-  useAccessibility,
-} from "@/contexts/AccessibilityContext";
-
-import {
-  Container,
-} from "./AccessibilityMenu.styles";
-
-import { Button }
-from "../Button";
-
-import { ThemeToggle }
-from "../ThemeToggle";
+import { useAccessibility } from "@/contexts/AccessibilityContext";
+import { Container } from "./AccessibilityMenu.styles";
+import { Button } from "../Button";
+import { ThemeToggle } from "../ThemeToggle";
 
 export function AccessibilityMenu() {
-
   const {
     toggleContrast,
     increaseFont,
@@ -23,17 +13,11 @@ export function AccessibilityMenu() {
   } = useAccessibility();
 
   return (
-    <Container
-      aria-label="
-      Configurações
-      de acessibilidade"
-    >
-
+    <Container aria-label="Configurações de acessibilidade">
       <Button
         variant="ghost"
         onClick={toggleContrast}
-        ariaLabel="
-        Ativar alto contraste"
+        ariaLabel="Ativar alto contraste"
       >
         ◐
       </Button>
@@ -41,8 +25,7 @@ export function AccessibilityMenu() {
       <Button
         variant="ghost"
         onClick={increaseFont}
-        ariaLabel="
-        Aumentar fonte"
+        ariaLabel="Aumentar fonte"
       >
         A+
       </Button>
@@ -50,14 +33,12 @@ export function AccessibilityMenu() {
       <Button
         variant="ghost"
         onClick={decreaseFont}
-        ariaLabel="
-        Diminuir fonte"
+        ariaLabel="Diminuir fonte"
       >
         A-
       </Button>
 
       <ThemeToggle />
-
     </Container>
   );
 }
