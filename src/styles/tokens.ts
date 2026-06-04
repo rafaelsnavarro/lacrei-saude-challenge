@@ -33,3 +33,13 @@ export const typography = {
   body: "1rem",
   small: "0.875rem",
 };
+
+export const shadows = {
+  sm: "0 2px 8px rgba(0,0,0,0.08)",
+  md: "0 4px 16px rgba(0,0,0,0.12)",
+};
+
+export const gradients = {
+  primary:
+    "linear-gradient(90deg,#00A78E 0%,#0066CC 100%)",
+};

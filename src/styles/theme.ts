@@ -3,6 +3,8 @@ import {
   spacing,
   radius,
   typography,
+  shadows,
+  gradients,
 } from "./tokens";
 
 export const defaultTheme = {
@@ -10,6 +12,8 @@ export const defaultTheme = {
   spacing,
   radius,
   typography,
+  shadows,
+  gradients,
   fontSize: 16,
 };
 

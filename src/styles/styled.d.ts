@@ -34,6 +34,14 @@ declare module "styled-components" {
       body: string;
       small: string;
     };
+    shadows: {
+  sm: string;
+  md: string;
+};
+
+gradients: {
+  primary: string;
+};
 
     fontSize: number;
   }
