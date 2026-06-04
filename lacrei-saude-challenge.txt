@@ -1,0 +1,43 @@
+lacrei-saude-challenge/
+
+├── public/
+│   ├── images/
+│   └── icons/
+│
+├── src/
+│
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── globals.ts
+│   │   └── profissionais/
+│   │       └── page.tsx
+│   │
+│   ├── components/
+        ├── Header/
+        ├── Footer/
+        ├── Button/
+        ├── AccessibilityMenu/
+        └── ThemeToggle/
+│   │
+│   ├── contexts/
+│   │   └── AccessibilityContext.tsx
+│   │
+│   ├── hooks/
+│   │
+│   ├── services/
+│   │
+│   ├── styles/
+│   │   ├── tokens.ts
+│   │   ├── theme.ts
+│   │   ├── GlobalStyle.ts
+│   │   └── styled.d.ts
+│   │
+│   ├── types/
+│   │
+│   └── utils/
+│
+├── next.config.ts
+├── tsconfig.json
+├── package.json
+└── .gitignore
