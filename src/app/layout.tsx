@@ -63,6 +63,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
+        <a
+    href="#main-content"
+    className="skip-link"
+  >
+    Pular para conteúdo principal
+  </a>
 
         <AccessibilityProvider>
 

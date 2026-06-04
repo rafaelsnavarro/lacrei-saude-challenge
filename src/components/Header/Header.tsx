@@ -14,35 +14,27 @@ import {
 } from "../AccessibilityMenu";
 
 export function Header() {
-
   return (
-    <Wrapper>
+    <header role="banner">
+      <Wrapper>
+        <Content>
+          <Logo>
+            Lacrei Saúde
+          </Logo>
 
-      <Content>
+          <Nav aria-label="Navegação principal">
+            <Link href="/">
+              Home
+            </Link>
 
-        <Logo>
-          Lacrei Saúde
-        </Logo>
+            <Link href="/profissionais">
+              Profissionais
+            </Link>
+          </Nav>
 
-        <Nav
-          aria-label="
-          Navegação principal"
-        >
-
-          <Link href="/">
-            Home
-          </Link>
-
-          <Link href="/profissionais">
-            Profissionais
-          </Link>
-
-        </Nav>
-
-        <AccessibilityMenu />
-
-      </Content>
-
-    </Wrapper>
+          <AccessibilityMenu />
+        </Content>
+      </Wrapper>
+    </header>
   );
 }
