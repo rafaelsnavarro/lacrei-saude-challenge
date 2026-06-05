@@ -11,4 +11,16 @@ export const professionals = [
     specialty: "Clínico Geral",
     city: "Rio de Janeiro",
   },
+  {
+    id: 3,
+    name: "Marina Costa",
+    specialty: "Nutrição",
+    city: "Campinas",
+  },
+  {
+    id: 4,
+    name: "Rafael Lima",
+    specialty: "Psiquiatria",
+    city: "Belo Horizonte",
+  },
 ];
