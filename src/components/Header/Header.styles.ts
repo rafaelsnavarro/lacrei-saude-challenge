@@ -1,53 +1,65 @@
 import styled from "styled-components";
 
-export const Wrapper =
-  styled.header`
+export const Wrapper = styled.header`
+  width: 100%;
 
-  width:100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-  border-bottom:1px solid
-    ${({ theme }) =>
-      theme.colors.border};
+  border-bottom: 1px solid #e5e7eb;
 
-  background:
-    ${({ theme }) =>
-      theme.colors.background};
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(8px);
 `;
 
-export const Content =
-  styled.div`
+export const Content = styled.div`
+  max-width: 1200px;
 
-  max-width:1200px;
+  margin: 0 auto;
 
-  margin:auto;
+  padding: 18px 24px;
 
-  padding:
-    ${({ theme }) =>
-      theme.spacing.md};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  display:flex;
+  gap: 24px;
 
-  align-items:center;
-
-  justify-content:space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
-export const Logo =
-  styled.h2`
+export const Logo = styled.h2`
+  color: #00a78e;
 
-  color:
-    ${({ theme }) =>
-      theme.colors.primary};
+  font-size: 1.5rem;
+  font-weight: 800;
 
-  font-weight:700;
+  letter-spacing: -0.02em;
 `;
 
-export const Nav =
-  styled.nav`
+export const Nav = styled.nav`
+  display: flex;
 
-  display:flex;
+  align-items: center;
 
-  gap:
-    ${({ theme }) =>
-      theme.spacing.lg};
+  gap: 32px;
+
+  a {
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #00a78e;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
 `;
