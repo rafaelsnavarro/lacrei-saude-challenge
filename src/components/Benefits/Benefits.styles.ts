@@ -48,6 +48,14 @@ export const Card = styled.article`
 
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 
+  span {
+  font-size: 2rem;
+
+  display: block;
+
+  margin-bottom: 16px;
+}
+
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;

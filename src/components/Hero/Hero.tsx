@@ -1,39 +1,61 @@
 "use client";
+
 import Link from "next/link";
 
 import {
   Container,
   Content,
+  TextContent,
+  Badge,
   Title,
   Description,
   Actions,
+  VisualCard,
+  VisualCircle,
+  VisualTitle,
+  VisualText,
 } from "./Hero.styles";
 
 import { Button } from "../Button";
 
 export function Hero() {
   return (
-    <Container>
+    <Container aria-labelledby="hero-title">
       <Content>
-        <Title>
-          Saúde inclusiva para
-          todas as pessoas
-        </Title>
+        <TextContent>
+          <Badge>Cuidado seguro e inclusivo</Badge>
 
-        <Description>
-          Conectamos você a profissionais
-          preparados para oferecer um
-          atendimento seguro, acolhedor
-          e respeitoso.
-        </Description>
+          <Title id="hero-title">
+            Olá, você está na Lacrei Saúde!
+          </Title>
 
-        <Actions>
-          <Link href="/profissionais">
-            <Button>
-              Encontrar profissionais
-            </Button>
-          </Link>
-        </Actions>
+          <Description>
+            Conectamos pessoas a profissionais de saúde qualificados,
+            proporcionando experiências de cuidado seguras, inclusivas
+            e acolhedoras.
+          </Description>
+
+          <Actions>
+            <Link href="/profissionais">
+              <Button ariaLabel="Buscar profissionais de saúde">
+                Buscar profissionais
+              </Button>
+            </Link>
+          </Actions>
+        </TextContent>
+
+        <VisualCard aria-label="Resumo dos pilares da Lacrei Saúde">
+          <VisualCircle>+</VisualCircle>
+
+          <VisualTitle>
+            Inclusão, acolhimento e segurança
+          </VisualTitle>
+
+          <VisualText>
+            Uma plataforma pensada para que cada pessoa se sinta respeitada
+            ao buscar cuidado.
+          </VisualText>
+        </VisualCard>
       </Content>
     </Container>
   );

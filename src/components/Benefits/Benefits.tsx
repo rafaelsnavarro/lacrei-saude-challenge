@@ -9,16 +9,19 @@ import {
 
 const benefits = [
   {
+    icon: "🛡️",
     title: "Atendimento seguro",
     description:
       "Profissionais preparados para oferecer cuidado com respeito, escuta e acolhimento.",
   },
   {
+    icon: "🌈",
     title: "Inclusão e diversidade",
     description:
       "Uma experiência pensada para que cada pessoa se sinta segura ao buscar cuidado.",
   },
   {
+    icon: "🤝",
     title: "Conexão com profissionais",
     description:
       "Encontre profissionais alinhados às suas necessidades de saúde.",
@@ -36,6 +39,7 @@ export function Benefits() {
         <Cards>
           {benefits.map((benefit) => (
             <Card key={benefit.title}>
+              <span>{benefit.icon}</span>
               <h3>{benefit.title}</h3>
               <p>{benefit.description}</p>
             </Card>
