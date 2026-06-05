@@ -13,30 +13,31 @@ export const Intro = styled.div`
   h1 {
     font-size: 2.5rem;
     margin-bottom: 16px;
-    color: #1d1d1d;
+    color: ${({ theme }) => theme?.colors?.text ?? "#1d1d1d"};
   }
 
   p {
     line-height: 1.7;
-    color: #1d1d1d;
+    color: ${({ theme }) => theme?.colors?.text ?? "#1d1d1d"};
   }
 `;
 
 export const SearchInput = styled.input`
   width: 100%;
   max-width: 560px;
-
   min-height: 48px;
-
   padding: 0 16px;
-
   margin-bottom: 40px;
-
-  border: 1px solid #e5e7eb;
-
+  border: 1px solid ${({ theme }) => theme?.colors?.border ?? "#e5e7eb"};
   border-radius: 12px;
-
   font-size: 1rem;
+
+  background: ${({ theme }) => theme?.colors?.surface ?? "#ffffff"};
+  color: ${({ theme }) => theme?.colors?.text ?? "#1d1d1d"};
+
+  &::placeholder {
+    color: #8a8a8a;
+  }
 
   &:focus {
     border-color: #00a78e;
@@ -59,12 +60,12 @@ export const Grid = styled.div`
 
 export const Card = styled.article`
   padding: 28px;
-
   border-radius: 16px;
 
-  background: #ffffff;
+  background: ${({ theme }) => theme?.colors?.surface ?? "#ffffff"};
+  border: 1px solid ${({ theme }) => theme?.colors?.border ?? "#e5e7eb"};
 
-  border: 1px solid #e5e7eb;
+  color: ${({ theme }) => theme?.colors?.text ?? "#1d1d1d"};
 
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 
@@ -81,17 +82,18 @@ export const Card = styled.article`
   h2 {
     font-size: 1.35rem;
     margin-bottom: 8px;
-    color: #008c76;
+    color: #00a78e;
   }
 
   strong {
     display: block;
     margin-bottom: 8px;
-    color: #1d1d1d;
+    color: ${({ theme }) => theme?.colors?.text ?? "#1d1d1d"};
   }
 
   p {
     margin-bottom: 20px;
+    color: ${({ theme }) => theme?.colors?.text ?? "#1d1d1d"};
   }
 
   &:hover {
@@ -103,5 +105,8 @@ export const Card = styled.article`
 export const EmptyMessage = styled.p`
   padding: 24px;
   border-radius: 12px;
-  background: #f5f7fa;
+
+  background: ${({ theme }) => theme?.colors?.surface ?? "#f5f7fa"};
+  color: ${({ theme }) => theme?.colors?.text ?? "#1d1d1d"};
+  border: 1px solid ${({ theme }) => theme?.colors?.border ?? "#e5e7eb"};
 `;

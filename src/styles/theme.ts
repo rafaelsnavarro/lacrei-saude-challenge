@@ -23,7 +23,10 @@ export const darkTheme = {
   colors: {
     ...colors,
     background: "#121212",
+    surface: "#1E1E1E",
     text: "#FFFFFF",
+    border: "#333333",
+    primary: "#00A78E",
   },
 };
 
@@ -33,7 +36,9 @@ export const highContrastTheme = {
   colors: {
     ...colors,
     background: "#000000",
+    surface: "#000000",
     text: "#FFFFFF",
+    border: "#FFFFFF",
     primary: "#FFFF00",
   },
 };

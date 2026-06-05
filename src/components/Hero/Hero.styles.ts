@@ -5,11 +5,15 @@ export const Container = styled.section`
   padding: 96px 24px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(
-    135deg,
-    #00a78e 0%,
-    #0066cc 100%
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 167, 142, 0.88) 0%,
+      rgba(0, 102, 204, 0.88) 100%
+    ),
+    ${({ theme }) => theme.colors.background};
+
   color: #ffffff;
 `;
 
@@ -20,7 +24,6 @@ export const Content = styled.div`
   display: grid;
   gap: 48px;
   align-items: center;
-
   grid-template-columns: 1fr;
 
   @media (min-width: 900px) {
@@ -37,7 +40,8 @@ export const Badge = styled.span`
   margin-bottom: 20px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
+  background: #00a78e;
+  color: #ffffff;
   font-weight: 700;
 `;
 
@@ -69,9 +73,15 @@ export const Actions = styled.div`
 export const VisualCard = styled.aside`
   padding: 40px;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(10px);
+
+  background: ${({ theme }) =>
+    theme.colors.surface};
+
+  border: 1px solid ${({ theme }) =>
+    theme.colors.border};
+
+  color: ${({ theme }) =>
+    theme.colors.text};
 `;
 
 export const VisualCircle = styled.div`
@@ -82,8 +92,8 @@ export const VisualCircle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  color: #00a78e;
+  background: #00a78e;
+  color: #ffffff;
   font-size: 2rem;
   font-weight: 800;
 `;

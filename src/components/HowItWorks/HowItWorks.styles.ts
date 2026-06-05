@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   padding: 72px 24px;
+
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Content = styled.div`
@@ -12,11 +15,13 @@ export const Content = styled.div`
 export const Title = styled.h2`
   font-size: 2rem;
   margin-bottom: 40px;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Steps = styled.div`
   display: grid;
   gap: 24px;
+  color: ${({ theme }) => theme.colors.text};
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
@@ -26,11 +31,13 @@ export const Steps = styled.div`
 export const Step = styled.article`
   padding: 24px;
 
-  border: 1px solid #e5e7eb;
-
   border-radius: 12px;
 
-  background: white;
+  background: ${({ theme }) => theme.colors.surface};
+
+  color: ${({ theme }) => theme.colors.text};
+
+  border: 1px solid ${({ theme }) => theme.colors.border};
 
   h3 {
     margin-bottom: 12px;

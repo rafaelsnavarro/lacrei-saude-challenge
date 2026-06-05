@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 export const Wrapper = styled.header`
   width: 100%;
-
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid
+    ${({ theme }) => theme?.colors?.border ?? "#e5e7eb"};
 
-  background: rgba(255, 255, 255, 0.96);
+  background: ${({ theme }) =>
+    theme?.colors?.surface ?? "#ffffff"};
 
   backdrop-filter: blur(8px);
 `;
@@ -49,16 +50,17 @@ export const Nav = styled.nav`
 
   gap: 32px;
 
-  a {
-    font-weight: 500;
+a {
+  color: ${({ theme }) =>
+    theme?.colors?.text ?? "#1d1d1d"};
 
-    transition: color 0.2s ease;
+  font-weight: 500;
+  transition: color 0.2s ease;
 
-    &:hover {
-      color: #00a78e;
-    }
+  &:hover {
+    color: #00a78e;
   }
-
+}
   @media (max-width: 768px) {
     gap: 16px;
   }
